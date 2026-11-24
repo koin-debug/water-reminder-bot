@@ -8,7 +8,9 @@ from pathlib import Path
 import telebot
 from telebot import types
 
-bot = telebot.TeleBot("BOT_TOKEN")
+from config import BOT_TOKEN
+
+bot = telebot.TeleBot(BOT_TOKEN)
 
 DATA_FILE = Path(__file__).parent / "user_data.json"
 data_lock = threading.Lock()
